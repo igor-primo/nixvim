@@ -11,6 +11,7 @@
     ./tmux-navigator.nix
     ./conform.nix
     ./neogit.nix
+    ./fugitive.nix
   ];
 
   colorscheme = "github_dark_high_contrast";
@@ -72,6 +73,78 @@
       options = {
         silent = true;
         desc = "Neogit";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gs";
+      action = ":Git<CR>";
+      options = {
+        silent = true;
+        desc = "Git status";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gc";
+      action = ":Git commit<CR>";
+      options = {
+        silent = true;
+        desc = "Git commit";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gP";
+      action = ":Git push<CR>";
+      options = {
+        silent = true;
+        desc = "Git push";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gp";
+      action = ":Git pull<CR>";
+      options = {
+        silent = true;
+        desc = "Git pull";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gd";
+      action = ":Gdiffsplit<CR>";
+      options = {
+        silent = true;
+        desc = "Git diff split";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gb";
+      action = ":Git blame<CR>";
+      options = {
+        silent = true;
+        desc = "Git blame";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gl";
+      action = ":Git log --oneline<CR>";
+      options = {
+        silent = true;
+        desc = "Git log";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gB";
+      action = ":GBrowse<CR>";
+      options = {
+        silent = true;
+        desc = "Git browse";
       };
     }
   ];
