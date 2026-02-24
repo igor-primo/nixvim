@@ -22,10 +22,14 @@
         format_on_save_timeout = 1000;
         formatters_by_ft = {
           nix = [ "nixfmt" ];
+          haskell = [ "fourmolu" ];
         };
         formatters = {
           nixfmt = {
             command = lib.getExe pkgs.nixpkgs-fmt;
+          };
+          fourmolu = {
+            command = lib.getExe pkgs.fourmolu;
           };
         };
       };
