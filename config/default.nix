@@ -7,7 +7,7 @@
     ./neo-tree.nix
     ./lsp.nix
     ./flash.nix
-    ./lightline.nix
+    ./lualine.nix
     ./tmux-navigator.nix
     ./conform.nix
     ./neogit.nix
@@ -45,11 +45,7 @@
       pattern = "*";
       command = "checktime";
     }
-    {
-      event = [ "FileType" ];
-      pattern = "neo-tree";
-      command = "setlocal statusline=%#Normal#";
-    }
+
   ];
 
   keymaps = [
