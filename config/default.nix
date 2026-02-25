@@ -45,6 +45,11 @@
       pattern = "*";
       command = "checktime";
     }
+    {
+      event = [ "FileType" ];
+      pattern = "neo-tree";
+      command = "setlocal statusline=%#Normal#";
+    }
   ];
 
   keymaps = [
