@@ -68,6 +68,15 @@
       };
     }
     {
+      mode = "n";
+      key = "s";
+      action = "<cmd>lua require('flash').jump()<CR>";
+      options = {
+        silent = true;
+        desc = "Flash jump";
+      };
+    }
+    {
       key = "<leader>g";
       action = ":Neogit<CR>";
       options = {
