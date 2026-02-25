@@ -34,7 +34,16 @@
     set tabstop=4
     set shiftwidth=4
     set expandtab
+    set autoread
   '';
+
+  autoCmd = [
+    {
+      event = [ "FocusGained" "BufEnter" "CursorHold" "CursorHoldI" ];
+      pattern = "*";
+      command = "checktime";
+    }
+  ];
 
   keymaps = [
     {
