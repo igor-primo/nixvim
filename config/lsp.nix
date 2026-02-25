@@ -8,6 +8,16 @@
           enable = true;
           package = null;
           installGhc = false;
+          settings = {
+            haskell = {
+              plugin = {
+                importLens = {
+                  codeActionsOn = false;
+                  codeLensOn = true;
+                };
+              };
+            };
+          };
         };
         html.enable = true;
         cssls.enable = true;
