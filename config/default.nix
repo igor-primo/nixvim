@@ -12,6 +12,9 @@
     ./conform.nix
     ./neogit.nix
     ./fugitive.nix
+    ./treesitter.nix
+    ./ts-autotag.nix
+    ./emmet.nix
   ];
 
   colorscheme = "github_dark_high_contrast";

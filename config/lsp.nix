@@ -9,6 +9,8 @@
           package = null;
           installGhc = false;
         };
+        html.enable = true;
+        cssls.enable = true;
       };
       inlayHints = true;
       onAttach = ''
