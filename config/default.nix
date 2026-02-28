@@ -164,6 +164,24 @@
     }
     {
       mode = "n";
+      key = "<leader>tl";
+      action = ":colorscheme github_light_high_contrast<CR>";
+      options = {
+        silent = true;
+        desc = "GitHub light high contrast theme";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>td";
+      action = ":colorscheme github_dark_high_contrast<CR>";
+      options = {
+        silent = true;
+        desc = "GitHub dark high contrast theme";
+      };
+    }
+    {
+      mode = "n";
       key = "<leader>g/";
       action.__raw = ''
         function()
