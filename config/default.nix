@@ -162,5 +162,22 @@
         desc = "Git browse";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>g/";
+      action.__raw = ''
+        function()
+          vim.ui.input({ prompt = "Git log -S (pickaxe): " }, function(input)
+            if input and input ~= "" then
+              vim.cmd("Git log -S" .. vim.fn.shellescape(input) .. " --oneline")
+            end
+          end)
+        end
+      '';
+      options = {
+        silent = true;
+        desc = "Git pickaxe search";
+      };
+    }
   ];
 }
