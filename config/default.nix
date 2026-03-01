@@ -17,7 +17,7 @@
     ./emmet.nix
   ];
 
-  colorscheme = "github_dark_high_contrast";
+  colorscheme = "github_light_high_contrast";
   clipboard = {
     register = "unnamedplus";
     providers = {
