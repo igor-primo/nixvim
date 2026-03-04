@@ -17,6 +17,7 @@
     ./ts-autotag.nix
     ./emmet.nix
     ./keymaps.nix
+    ./completion.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim
