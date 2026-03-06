@@ -43,6 +43,11 @@
     set shiftwidth=2
     set expandtab
     set autoread
+    set foldmethod=expr
+    set foldexpr=v:lua.vim.treesitter.foldexpr()
+    set foldlevel=0
+    set foldlevelstart=0
+    set foldenable
   '';
 
   autoCmd = [
@@ -67,6 +72,10 @@
   ];
 
   extraConfigLua = ''
+    vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1a1a2e" })
+    vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#888888" })
+    vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#1a1a2e" })
+    vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
     require('osc11').setup({
       on_dark = function()
         vim.cmd("colorscheme github_dark_high_contrast")
