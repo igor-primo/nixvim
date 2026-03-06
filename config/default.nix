@@ -45,8 +45,8 @@
     set autoread
     set foldmethod=expr
     set foldexpr=v:lua.vim.treesitter.foldexpr()
-    set foldlevel=0
-    set foldlevelstart=0
+    set foldlevel=99
+    set foldlevelstart=99
     set foldenable
   '';
 
