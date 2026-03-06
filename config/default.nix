@@ -78,10 +78,12 @@
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
     require('osc11').setup({
       on_dark = function()
-        vim.cmd("colorscheme github_dark_high_contrast")
+        vim.cmd("colorscheme ayu-dark")
+        require('lualine').setup({ options = { theme = 'ayu_dark' } })
       end,
       on_light = function()
-        vim.cmd("colorscheme github_light_high_contrast")
+        vim.cmd("colorscheme ayu-light")
+        require('lualine').setup({ options = { theme = 'ayu_light' } })
       end,
     })
   '';
