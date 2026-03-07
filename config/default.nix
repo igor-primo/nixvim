@@ -2,7 +2,6 @@
 {
   # Import all your configuration modules here
   imports = [
-    ./bufferline.nix
     ./colorschemes.nix
     ./telescope.nix
     ./neo-tree.nix
@@ -18,6 +17,7 @@
     ./emmet.nix
     ./keymaps.nix
     ./completion.nix
+    ./devicons.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim
@@ -56,7 +56,11 @@
       pattern = "*";
       command = "checktime";
     }
-
+    {
+      event = [ "VimEnter" ];
+      pattern = "*";
+      command = "Neotree show";
+    }
   ];
 
   extraPlugins = [
@@ -72,6 +76,14 @@
   ];
 
   extraConfigLua = ''
+    vim.api.nvim_create_autocmd("BufEnter", {
+      callback = function()
+        if #vim.api.nvim_list_wins() == 1 and vim.bo.filetype == "neo-tree" then
+          vim.cmd("quit")
+        end
+      end,
+    })
+
     vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1a1a2e" })
     vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#888888" })
     vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#1a1a2e" })
