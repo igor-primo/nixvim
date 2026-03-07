@@ -18,6 +18,7 @@
     ./keymaps.nix
     ./completion.nix
     ./bufferline.nix
+    ./gitsigns.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim

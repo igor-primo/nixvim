@@ -85,15 +85,6 @@
     }
     {
       mode = "n";
-      key = "<leader>gb";
-      action = ":Git blame<CR>";
-      options = {
-        silent = true;
-        desc = "Git blame";
-      };
-    }
-    {
-      mode = "n";
       key = "<leader>gl";
       action = ":Git log --oneline<CR>";
       options = {
@@ -108,6 +99,15 @@
       options = {
         silent = true;
         desc = "Git browse";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>gb";
+      action = ":Gitsigns blame<CR>";
+      options = {
+        silent = true;
+        desc = "Gitsigns blame";
       };
     }
     {
