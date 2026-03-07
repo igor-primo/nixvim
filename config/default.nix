@@ -48,6 +48,7 @@
     set foldlevel=99
     set foldlevelstart=99
     set foldenable
+    set laststatus=3
   '';
 
   autoCmd = [
