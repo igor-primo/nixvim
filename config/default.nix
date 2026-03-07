@@ -17,7 +17,7 @@
     ./emmet.nix
     ./keymaps.nix
     ./completion.nix
-    ./devicons.nix
+    ./bufferline.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim
