@@ -113,7 +113,12 @@
     {
       mode = "n";
       key = "<leader>tl";
-      action = ":colorscheme ayu-light<CR>";
+      action.__raw = ''
+        function()
+          vim.cmd("colorscheme ayu-light")
+          require('lualine').setup({ options = { theme = 'ayu_light' } })
+        end
+      '';
       options = {
         silent = true;
         desc = "GitHub light high contrast theme";
@@ -122,7 +127,12 @@
     {
       mode = "n";
       key = "<leader>td";
-      action = ":colorscheme ayu-dark<CR>";
+      action.__raw = ''
+        function()
+          vim.cmd("colorscheme ayu-dark")
+          require('lualine').setup({ options = { theme = 'ayu_dark' } })
+        end
+      '';
       options = {
         silent = true;
         desc = "GitHub dark high contrast theme";
