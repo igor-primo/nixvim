@@ -1,4 +1,43 @@
 { pkgs, lib, ... }:
+let
+  fourmoluConfig = pkgs.writeText "fourmolu.yaml" ''
+    extensions:
+      - OverloadedStrings
+      - NoImplicitPrelude
+      - ImplicitParams
+      - Rank2Types
+      - DisambiguateRecordFields
+      - NamedFieldPuns
+      - DuplicateRecordFields
+      - OverloadedLabels
+      - FlexibleContexts
+      - TypeSynonymInstances
+      - FlexibleInstances
+      - QuasiQuotes
+      - TypeFamilies
+      - PackageImports
+      - ScopedTypeVariables
+      - RecordWildCards
+      - TypeApplications
+      - DataKinds
+      - InstanceSigs
+      - DeriveGeneric
+      - MultiParamTypeClasses
+      - TypeOperators
+      - DeriveDataTypeable
+      - MultiWayIf
+      - UndecidableInstances
+      - BlockArguments
+      - PartialTypeSignatures
+      - LambdaCase
+      - DefaultSignatures
+      - EmptyDataDeriving
+      - BangPatterns
+      - FunctionalDependencies
+      - StandaloneDeriving
+      - DerivingVia
+  '';
+in
 {
   plugins = {
     conform-nvim = {
@@ -30,6 +69,7 @@
           };
           fourmolu = {
             command = lib.getExe pkgs.fourmolu;
+            prepend_args = [ "--config-path" "${fourmoluConfig}" ];
           };
         };
       };
