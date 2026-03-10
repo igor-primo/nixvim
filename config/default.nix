@@ -23,6 +23,7 @@
     ./which-key.nix
     ./indent-blankline.nix
     ./todo-comments.nix
+    ./comment.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim
