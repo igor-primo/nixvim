@@ -155,5 +155,37 @@
         desc = "Git pickaxe search";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>uw";
+      action.__raw = ''
+        function()
+          vim.wo.wrap = not vim.wo.wrap
+          vim.notify("Local wrap " .. (vim.wo.wrap and "enabled" or "disabled"))
+        end
+      '';
+      options = {
+        silent = true;
+        desc = "Toggle wrap (local window)";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>uW";
+      action.__raw = ''
+        function()
+          local new_val = not vim.go.wrap
+          vim.go.wrap = new_val
+          for _, win in ipairs(vim.api.nvim_list_wins()) do
+            vim.wo[win].wrap = new_val
+          end
+          vim.notify("Global wrap " .. (new_val and "enabled" or "disabled"))
+        end
+      '';
+      options = {
+        silent = true;
+        desc = "Toggle wrap (all windows)";
+      };
+    }
   ];
 }
