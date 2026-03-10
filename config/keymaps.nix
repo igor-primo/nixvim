@@ -227,5 +227,23 @@
         desc = "Toggle wrap (all windows)";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>cp";
+      action = "<cmd>CccPick<CR>";
+      options = {
+        silent = true;
+        desc = "Color picker";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>ch";
+      action = "<cmd>CccHighlighterToggle<CR>";
+      options = {
+        silent = true;
+        desc = "Toggle color highlighting";
+      };
+    }
   ];
 }
