@@ -19,6 +19,10 @@
     ./completion.nix
     ./bufferline.nix
     ./gitsigns.nix
+    ./trouble.nix
+    ./which-key.nix
+    ./indent-blankline.nix
+    ./todo-comments.nix
   ];
 
   # colorscheme selected dynamically by OSC11.nvim

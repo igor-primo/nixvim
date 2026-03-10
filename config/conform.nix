@@ -62,6 +62,16 @@ in
         formatters_by_ft = {
           nix = [ "nixfmt" ];
           haskell = [ "fourmolu" ];
+          javascript = [ "prettier" ];
+          javascriptreact = [ "prettier" ];
+          typescript = [ "prettier" ];
+          typescriptreact = [ "prettier" ];
+          json = [ "prettier" ];
+          jsonc = [ "prettier" ];
+          yaml = [ "prettier" ];
+          html = [ "prettier" ];
+          css = [ "prettier" ];
+          markdown = [ "prettier" ];
         };
         formatters = {
           nixfmt = {
@@ -70,6 +80,9 @@ in
           fourmolu = {
             command = lib.getExe pkgs.fourmolu;
             prepend_args = [ "--config-path" "${fourmoluConfig}" ];
+          };
+          prettier = {
+            command = lib.getExe pkgs.prettier;
           };
         };
       };

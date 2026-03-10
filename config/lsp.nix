@@ -11,6 +11,10 @@
         };
         html.enable = true;
         cssls.enable = true;
+        ts_ls.enable = true;
+        eslint.enable = true;
+        jsonls.enable = true;
+        yamlls.enable = true;
       };
       inlayHints = true;
       onAttach = ''
