@@ -155,6 +155,46 @@
         desc = "Git pickaxe search";
       };
     }
+    # Move current line down (normal mode)
+    {
+      mode = "n";
+      key = "<A-j>";
+      action = "<cmd>move .+1<CR>==";
+      options = {
+        silent = true;
+        desc = "Move line down";
+      };
+    }
+    # Move current line up (normal mode)
+    {
+      mode = "n";
+      key = "<A-k>";
+      action = "<cmd>move .-2<CR>==";
+      options = {
+        silent = true;
+        desc = "Move line up";
+      };
+    }
+    # Move selected block down (visual mode)
+    {
+      mode = "v";
+      key = "<A-j>";
+      action = ":move '>+1<CR>gv=gv";
+      options = {
+        silent = true;
+        desc = "Move selection down";
+      };
+    }
+    # Move selected block up (visual mode)
+    {
+      mode = "v";
+      key = "<A-k>";
+      action = ":move '<-2<CR>gv=gv";
+      options = {
+        silent = true;
+        desc = "Move selection up";
+      };
+    }
     {
       mode = "n";
       key = "<leader>uw";
