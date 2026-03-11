@@ -36,6 +36,7 @@ let
       - FunctionalDependencies
       - StandaloneDeriving
       - DerivingVia
+      - ImportQualifiedPost
   '';
 in
 {
