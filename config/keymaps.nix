@@ -115,8 +115,9 @@
       key = "<leader>tl";
       action.__raw = ''
         function()
-          vim.cmd("colorscheme ayu-light")
-          require('lualine').setup({ options = { theme = 'ayu_light' } })
+          -- vim.cmd("colorscheme zenbones")
+          vim.o.background = "light"
+          require('lualine').setup({ options = { theme = 'Tomorrow' } })
         end
       '';
       options = {
@@ -129,8 +130,9 @@
       key = "<leader>td";
       action.__raw = ''
         function()
-          vim.cmd("colorscheme ayu-dark")
-          require('lualine').setup({ options = { theme = 'ayu_dark' } })
+          -- vim.cmd("colorscheme zenbones")
+          vim.o.background = "dark"
+          require('lualine').setup({ options = { theme = 'tomorrow_night' } })
         end
       '';
       options = {

@@ -81,6 +81,23 @@
         hash = "sha256-s7HyMf90WdO0pyk1EQeRzOwK+5jbPDaoooK/sKroCw4=";
       };
     })
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "lush-nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "rktjmp";
+        repo = "lush.nvim";
+        rev = "9c60ec2279d62487d942ce095e49006af28eed6e";
+        sha256 = "18rafbyraxaf99km1ij0xcp9vnmwmwcglynwm33fy3fz5aibcc34";
+      };
+    })
+    (pkgs.runCommand "vimplugin-zenbones" { } ''
+      cp -r ${pkgs.fetchFromGitHub {
+        owner = "zenbones-theme";
+        repo = "zenbones.nvim";
+        rev = "22b7fb75593412e0dc81b4bdefae718e9e84aa82";
+        sha256 = "1jc5q6fl5jnl93vzwdb2970s08d7c8wa8m2bdfzxdrvzl0qrrxyr";
+      }}/. $out
+    '')
   ];
 
   extraConfigLua = ''
@@ -92,18 +109,20 @@
       end,
     })
 
-    vim.api.nvim_set_hl(0, "BlinkCmpMenu", { bg = "#1a1a2e" })
     vim.api.nvim_set_hl(0, "BlinkCmpMenuBorder", { fg = "#888888" })
     vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#1a1a2e" })
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
+
     require('osc11').setup({
       on_dark = function()
-        vim.cmd("colorscheme ayu-dark")
-        require('lualine').setup({ options = { theme = 'ayu_dark' } })
+        vim.cmd("colorscheme zenbones")
+        vim.o.background = "dark"
+        require('lualine').setup({ options = { theme = 'tomorrow_night' } })
       end,
       on_light = function()
-        vim.cmd("colorscheme ayu-light")
-        require('lualine').setup({ options = { theme = 'ayu_light' } })
+        vim.cmd("colorscheme zenbones")
+        vim.o.background = "light"
+        require('lualine').setup({ options = { theme = 'Tomorrow' } })
       end,
     })
   '';
