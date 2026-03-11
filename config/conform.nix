@@ -37,6 +37,7 @@ let
       - StandaloneDeriving
       - DerivingVia
       - ImportQualifiedPost
+      - OverloadedRecordDot
   '';
 in
 {
