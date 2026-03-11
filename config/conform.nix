@@ -79,7 +79,7 @@ in
           };
           fourmolu = {
             command = lib.getExe pkgs.fourmolu;
-            prepend_args = [ "--config-path" "${fourmoluConfig}" ];
+            prepend_args = [ "--config" "${fourmoluConfig}" ];
           };
           prettier = {
             command = lib.getExe pkgs.prettier;
