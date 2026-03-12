@@ -98,6 +98,15 @@
         sha256 = "1jc5q6fl5jnl93vzwdb2970s08d7c8wa8m2bdfzxdrvzl0qrrxyr";
       }}/. $out
     '')
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "mellifluous-nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "ramojus";
+        repo = "mellifluous.nvim";
+        rev = "9948359e1536b4171615f7280e61e17620e3fd45";
+        sha256 = "1x7fjvwlg1g1fy716mc87hwa5zdlssj4z2nvxk5lnmvi76qlgps0";
+      };
+    })
   ];
 
   extraConfigLua = ''
@@ -113,6 +122,8 @@
     vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#1a1a2e" })
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
 
+    vim.o.background = "light"
+    vim.cmd("colorscheme zenbones")
     require('osc11').setup({
       on_dark = function()
         vim.o.background = "dark"
