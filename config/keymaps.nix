@@ -117,7 +117,7 @@
         function()
           -- vim.cmd("colorscheme zenbones")
           vim.o.background = "light"
-          require('lualine').setup({ options = { theme = 'Tomorrow' } })
+          require('lualine').setup({ options = { theme = 'zenbones' } })
         end
       '';
       options = {
@@ -132,7 +132,7 @@
         function()
           -- vim.cmd("colorscheme zenbones")
           vim.o.background = "dark"
-          require('lualine').setup({ options = { theme = 'tomorrow_night' } })
+          require('lualine').setup({ options = { theme = 'zenbones' } })
         end
       '';
       options = {

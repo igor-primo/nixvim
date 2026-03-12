@@ -115,14 +115,14 @@
 
     require('osc11').setup({
       on_dark = function()
-        vim.cmd("colorscheme zenbones")
         vim.o.background = "dark"
-        require('lualine').setup({ options = { theme = 'tomorrow_night' } })
+        vim.cmd("colorscheme zenbones")
+        require('lualine').setup({ options = { theme = 'zenbones' } })
       end,
       on_light = function()
-        vim.cmd("colorscheme zenbones")
         vim.o.background = "light"
-        require('lualine').setup({ options = { theme = 'Tomorrow' } })
+        vim.cmd("colorscheme zenbones")
+        require('lualine').setup({ options = { theme = 'zenbones' } })
       end,
     })
   '';

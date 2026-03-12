@@ -5,7 +5,7 @@
       autoLoad = true;
       settings = {
         options = {
-          theme = "ayu_dark";
+          theme = "auto";
           disabled_filetypes = {
             statusline = [
               "dap-repl"
