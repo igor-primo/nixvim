@@ -27,6 +27,8 @@
     ./ccc.nix
   ];
 
+  globals.copilot_enabled = 0;
+
   # colorscheme selected dynamically by OSC11.nvim
   clipboard = {
     register = "unnamedplus";
