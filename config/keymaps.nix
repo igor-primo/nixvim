@@ -247,5 +247,14 @@
         desc = "Toggle color highlighting";
       };
     }
+    {
+      mode = "n";
+      key = "<leader>z";
+      action = "<cmd>ZenMode<CR>";
+      options = {
+        silent = true;
+        desc = "Toggle Zen Mode";
+      };
+    }
   ];
 }

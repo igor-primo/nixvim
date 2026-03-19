@@ -21,6 +21,7 @@
     ./gitsigns.nix
     ./trouble.nix
     ./which-key.nix
+    ./zen-mode.nix
     ./indent-blankline.nix
     ./todo-comments.nix
     ./comment.nix
