@@ -122,7 +122,7 @@
       '';
       options = {
         silent = true;
-        desc = "GitHub light high contrast theme";
+        desc = "Light theme";
       };
     }
     {
@@ -137,7 +137,7 @@
       '';
       options = {
         silent = true;
-        desc = "GitHub dark high contrast theme";
+        desc = "Dark theme";
       };
     }
     {
