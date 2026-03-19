@@ -110,6 +110,15 @@
         sha256 = "1x7fjvwlg1g1fy716mc87hwa5zdlssj4z2nvxk5lnmvi76qlgps0";
       };
     })
+    (pkgs.vimUtils.buildVimPlugin {
+      name = "binary-nvim";
+      src = pkgs.fetchFromGitHub {
+        owner = "jackplus-xyz";
+        repo = "binary.nvim";
+        rev = "0a0422551dfc9e8b02c00b133f63d72a75938d81";
+        hash = "sha256-rV6a1P7tTSXoLhDrBoFaK810PQ1Es9ZGcr6siKPlopI=";
+      };
+    })
   ];
 
   extraConfigLua = ''
@@ -126,17 +135,17 @@
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
 
     vim.o.background = "light"
-    vim.cmd("colorscheme zenbones")
+    vim.cmd("colorscheme zenwritten")
     require('osc11').setup({
       on_dark = function()
         vim.o.background = "dark"
-        vim.cmd("colorscheme zenbones")
-        require('lualine').setup({ options = { theme = 'zenbones' } })
+        vim.cmd("colorscheme zenwritten")
+        require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
       on_light = function()
         vim.o.background = "light"
-        vim.cmd("colorscheme zenbones")
-        require('lualine').setup({ options = { theme = 'zenbones' } })
+        vim.cmd("colorscheme zenwritten")
+        require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
     })
   '';

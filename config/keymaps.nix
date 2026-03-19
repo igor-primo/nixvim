@@ -117,7 +117,7 @@
         function()
           -- vim.cmd("colorscheme zenbones")
           vim.o.background = "light"
-          require('lualine').setup({ options = { theme = 'zenbones' } })
+          require('lualine').setup({ options = { theme = 'zenwritten' } })
         end
       '';
       options = {
@@ -132,12 +132,26 @@
         function()
           -- vim.cmd("colorscheme zenbones")
           vim.o.background = "dark"
-          require('lualine').setup({ options = { theme = 'zenbones' } })
+          require('lualine').setup({ options = { theme = 'zenwritten' } })
         end
       '';
       options = {
         silent = true;
         desc = "Dark theme";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>tb";
+      action.__raw = ''
+        function()
+          vim.cmd("colorscheme binary")
+          require("binary").setup({ style = "system" })
+        end
+      '';
+      options = {
+        silent = true;
+        desc = "Binary theme";
       };
     }
     {
