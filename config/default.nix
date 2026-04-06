@@ -68,11 +68,6 @@
       pattern = "*";
       command = "checktime";
     }
-    {
-      event = [ "VimEnter" ];
-      pattern = "*";
-      command = "Neotree show";
-    }
   ];
 
   extraPlugins = [
