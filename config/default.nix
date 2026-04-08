@@ -60,6 +60,7 @@
     set foldlevelstart=99
     set foldenable
     set laststatus=3
+    set scrolloff=8
   '';
 
   autoCmd = [
