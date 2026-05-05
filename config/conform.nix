@@ -2,7 +2,7 @@
 {
   plugins = {
     conform-nvim = {
-      enable = false;
+      enable = true;
       settings = {
         format_on_save = ''
           function(bufnr)

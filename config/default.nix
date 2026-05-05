@@ -132,16 +132,16 @@
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
 
     vim.o.background = "light"
-    vim.cmd("colorscheme zenwritten")
+    vim.cmd("colorscheme zenburned")
     require('osc11').setup({
       on_dark = function()
         vim.o.background = "dark"
-        vim.cmd("colorscheme zenwritten")
+        vim.cmd("colorscheme zenburned")
         require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
       on_light = function()
         vim.o.background = "light"
-        vim.cmd("colorscheme zenwritten")
+        vim.cmd("colorscheme zenburned")
         require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
     })
