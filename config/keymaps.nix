@@ -117,7 +117,7 @@
         function()
           -- vim.cmd("colorscheme zenbones")
           vim.o.background = "light"
-          require('lualine').setup({ options = { theme = 'zenburned' } })
+          require('lualine').setup({ options = { theme = 'zenwritten' } })
         end
       '';
       options = {
