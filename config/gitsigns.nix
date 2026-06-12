@@ -1,7 +1,7 @@
 {
   plugins = {
     gitsigns = {
-      enable = true;
+      enable = false;
       autoLoad = true;
       settings = {
         current_line_blame = true;

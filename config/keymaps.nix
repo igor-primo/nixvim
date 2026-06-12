@@ -1,6 +1,13 @@
 {
   keymaps = [
     {
+      action = ":set number! relativenumber!<CR>";
+      key = "<Space>n";
+      options = {
+        silent = true;
+      };
+    }
+    {
       action = ":Neotree toggle<CR>";
       key = "<Space>e";
       options = {
