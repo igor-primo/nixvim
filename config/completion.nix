@@ -22,8 +22,8 @@
     friendly-snippets.enable = true;
 
     copilot-vim = {
-      enable = true;
-      autoLoad = true;
+      enable = false;
+      autoLoad = false;
     };
   };
 }
