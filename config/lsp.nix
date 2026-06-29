@@ -15,6 +15,7 @@
         eslint.enable = true;
         jsonls.enable = true;
         yamlls.enable = true;
+        elmls.enable = true;
       };
       inlayHints = true;
       onAttach = ''

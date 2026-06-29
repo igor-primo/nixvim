@@ -27,6 +27,7 @@
     ./comment.nix
     ./ccc.nix
     ./quicker.nix
+    ./none-ls.nix
   ];
 
   globals.copilot_enabled = 0;
