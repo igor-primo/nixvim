@@ -130,18 +130,18 @@
     vim.api.nvim_set_hl(0, "BlinkCmpDoc", { bg = "#1a1a2e" })
     vim.api.nvim_set_hl(0, "BlinkCmpDocBorder", { fg = "#888888" })
 
-    vim.o.background = "light"
-    vim.cmd("colorscheme zenbones")
+    -- vim.o.background = "light"
+    -- vim.cmd("colorscheme zenbones")
     require('osc11').setup({
       on_dark = function()
-        vim.o.background = "dark"
-        vim.cmd("colorscheme zenburned")
-        require('lualine').setup({ options = { theme = 'zenwritten' } })
+        -- vim.o.background = "dark"
+        vim.cmd("colorscheme github_dark_high_contrast")
+        -- require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
       on_light = function()
-        vim.o.background = "light"
-        vim.cmd("colorscheme zenbones")
-        require('lualine').setup({ options = { theme = 'zenwritten' } })
+        -- vim.o.background = "light"
+        vim.cmd("colorscheme github_light_high_contrast")
+        -- require('lualine').setup({ options = { theme = 'zenwritten' } })
       end,
     })
   '';

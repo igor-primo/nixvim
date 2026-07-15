@@ -122,9 +122,9 @@
       key = "<leader>tl";
       action.__raw = ''
         function()
-          vim.cmd("colorscheme zenbones")
+          vim.cmd("colorscheme github_light_high_contrast")
           vim.o.background = "light"
-          require('lualine').setup({ options = { theme = 'zenwritten' } })
+          -- require('lualine').setup({ options = { theme = 'zenwritten' } })
         end
       '';
       options = {
@@ -137,9 +137,9 @@
       key = "<leader>td";
       action.__raw = ''
         function()
-          vim.cmd("colorscheme zenburned")
+          vim.cmd("colorscheme github_dark_high_contrast")
           vim.o.background = "dark"
-          require('lualine').setup({ options = { theme = 'zenburned' } })
+          -- require('lualine').setup({ options = { theme = 'zenburned' } })
         end
       '';
       options = {
