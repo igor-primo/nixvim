@@ -56,7 +56,7 @@
     set foldmethod=expr
     set foldexpr=v:lua.vim.treesitter.foldexpr()
     set foldlevel=99
-    set foldlevelstart=99
+    set foldlevelstart=0
     set foldenable
     set laststatus=3
     set scrolloff=8
